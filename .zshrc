@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-if SESSION_TYPE=remote/ssh then
+if [[ -v SESSION_TYPE ]]; then
     ZSH_THEME="remotecandy"
 else
     ZSH_THEME="localcandy"
